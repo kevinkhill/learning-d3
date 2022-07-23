@@ -26,6 +26,8 @@ export const Circles: FC<{ data: number[] }> = ({ data }) => {
       update
         .enter()
         .append("circle")
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         .merge(update)
         .attr("r", d => d)
         .attr("cx", (_, i) => width * (i + 1))
